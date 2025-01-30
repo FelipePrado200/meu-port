@@ -12,9 +12,9 @@
 </head>
 <body>
     <!-- Tela de Boas-Vindas -->
-    <div id="welcome-screen">
+   <div id="welcome-screen">
         <div class="welcome-content">
-            <h1>Bem-Vindo ao Meu Portifólio</h1>
+            <h1>Bem-Vindo ao Meu Portfólio</h1>
             <div class="loader"></div>
         </div>
     </div>
@@ -23,6 +23,8 @@
     <div id="main-content" class="hidden">
         <header>
             <h1>Felipe Rodrigues Prado</h1>
+            <!-- Animação do Computador -->
+            <div class="computer-loader">💻</div>
             <nav>
                 <ul>
                     <li><a href="#sobre-mim">Sobre Mim</a></li>
@@ -177,7 +179,16 @@
                 mainContent.classList.remove("hidden");
             }, 3000); // Aguarda 3 segundos antes de ocultar a tela de boas-vindas
         });
+        //computador
+            document.addEventListener("DOMContentLoaded", () => {
+            const welcomeScreen = document.getElementById("welcome-screen");
+            const mainContent = document.getElementById("main-content");
 
+            setTimeout(() => {
+                welcomeScreen.style.display = "none";
+                mainContent.classList.remove("hidden");
+            }, 3000);
+        });
         // Formulário de Contato via WhatsApp
         const whatsappForm = document.getElementById("whatsappForm");
         whatsappForm.addEventListener("submit", (event) => {
