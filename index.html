@@ -178,17 +178,6 @@
             }, 3000); // Aguarda 3 segundos antes de ocultar a tela de boas-vindas
         });
 
-        // Alternar Tema
-        const themeToggle = document.getElementById("theme-toggle");
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            if (document.body.classList.contains("dark-mode")) {
-                themeToggle.textContent = "Modo Claro";
-            } else {
-                themeToggle.textContent = "Modo Escuro";
-            }
-        });
-
         // Formulário de Contato via WhatsApp
         const whatsappForm = document.getElementById("whatsappForm");
         whatsappForm.addEventListener("submit", (event) => {
@@ -204,24 +193,6 @@
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoWhatsApp)}`;
             window.open(url, "_blank");
         });
-
-        // Mostrar gradualmente as seções
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove("hidden");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-
-        document.querySelectorAll("section.hidden").forEach((section) => {
-            observer.observe(section);
-        });
-
     </script>
 </body>
 </html>
