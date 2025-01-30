@@ -15,7 +15,6 @@
    <div id="welcome-screen">
         <div class="welcome-content">
             <h1>Bem-Vindo ao Meu Portfólio</h1>
-            <div class="loader"></div>
         </div>
     </div>
 
@@ -23,7 +22,6 @@
     <div id="main-content" class="hidden">
         <header>
             <h1>Felipe Rodrigues Prado</h1>
-            <!-- Animação do Computador -->
             <nav>
                 <ul>
                     <li><a href="#sobre-mim">Sobre Mim</a></li>
@@ -169,7 +167,7 @@
     <script>
         // Exibe a tela de boas-vindas por 3 segundos e depois mostra o conteúdo principal
         // Tela de Boas-Vindas
-        document.addEventListener("DOMContentLoaded", () => {
+            document.addEventListener("DOMContentLoaded", () => {
             const welcomeScreen = document.getElementById("welcome-screen");
             const mainContent = document.getElementById("main-content");
 
@@ -179,8 +177,8 @@
             }, 3000); // Aguarda 3 segundos antes de ocultar a tela de boas-vindas
 
             // Formulário de Contato via WhatsApp
-        const whatsappForm = document.getElementById("whatsappForm");
-        whatsappForm.addEventListener("submit", (event) => {
+            const whatsappForm = document.getElementById("whatsappForm");
+            whatsappForm.addEventListener("submit", (event) => {
             event.preventDefault();
 
             const nome = document.getElementById("nome").value;
